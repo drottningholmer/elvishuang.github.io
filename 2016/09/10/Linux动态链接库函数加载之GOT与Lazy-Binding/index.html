@@ -3,14 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>Linux动态链接库函数加载之GOT与Lazy Binding | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="黄帅 &amp;#115;&amp;#100;&amp;#x75;&amp;#x68;&amp;#x75;&amp;#97;&amp;#x6e;&amp;#103;&amp;#x73;&amp;#x68;&amp;#x75;&amp;#x61;&amp;#105;&amp;#x40;&amp;#103;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;  
+Linux 在运行与位置无关 PIC(Position Independent Code)的用户态程序并加载动态链接库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux动态链接库函数加载之GOT与Lazy Binding">
+<meta property="og:url" content="http://yoursite.com/2016/09/10/Linux动态链接库函数加载之GOT与Lazy-Binding/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="黄帅 &amp;#115;&amp;#100;&amp;#x75;&amp;#x68;&amp;#x75;&amp;#97;&amp;#x6e;&amp;#103;&amp;#x73;&amp;#x68;&amp;#x75;&amp;#x61;&amp;#105;&amp;#x40;&amp;#103;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;  
+Linux 在运行与位置无关 PIC(Position Independent Code)的用户态程序并加载动态链接库">
+<meta property="og:image" content="http://yoursite.com/pictures/got_1.jpg">
+<meta property="og:image" content="http://yoursite.com/pictures/got_2.jpg">
+<meta property="og:updated_time" content="2016-09-10T13:59:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Linux动态链接库函数加载之GOT与Lazy Binding">
+<meta name="twitter:description" content="黄帅 &amp;#115;&amp;#100;&amp;#x75;&amp;#x68;&amp;#x75;&amp;#97;&amp;#x6e;&amp;#103;&amp;#x73;&amp;#x68;&amp;#x75;&amp;#x61;&amp;#105;&amp;#x40;&amp;#103;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;  
+Linux 在运行与位置无关 PIC(Position Independent Code)的用户态程序并加载动态链接库">
+<meta name="twitter:image" content="http://yoursite.com/pictures/got_1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +69,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Linux动态链接库函数加载之GOT与Lazy-Binding" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Linux动态链接库函数加载之GOT与Lazy-Binding" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/09/10/Linux动态链接库函数加载之GOT与Lazy-Binding/" class="article-date">
   <time datetime="2016-09-10T13:19:45.000Z" itemprop="datePublished">2016-09-10</time>
@@ -74,8 +82,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/10/Linux动态链接库函数加载之GOT与Lazy-Binding/">Linux动态链接库函数加载之GOT与Lazy Binding</a>
+    <h1 class="article-title" itemprop="name">
+      Linux动态链接库函数加载之GOT与Lazy Binding
     </h1>
   
 
@@ -158,47 +166,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Git典型工作流程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/09/09/Git典型工作流程/" class="article-date">
-  <time datetime="2016-09-09T08:19:28.000Z" itemprop="datePublished">2016-09-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/09/Git典型工作流程/">Git典型工作流程</a>
-    </h1>
+    <a href="/2016/09/09/Git典型工作流程/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Git典型工作流程</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Here comes “Git Typical Working flow” user guide for daily use.<br>The following pdf attachment is a summary of Git command usage.</p>
-<h2 id="Git-Typical-Working-flow"><a href="#Git-Typical-Working-flow" class="headerlink" title="Git Typical Working flow"></a>Git Typical Working flow</h2><center><embed src="/pdf/Git Typical working flow.pdf" width="850" height="600"></center>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/09/Git典型工作流程/" data-id="cisx8u79b00017k5x7fiwtxgf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
